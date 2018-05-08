@@ -4,10 +4,11 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
-subtitle:
-description:
-author: John Doe
+avatar: /uploads/avatar.jpg
+title: Danger Blog
+subtitle: Better to light one candle than to curse the darkness
+description: Great Expectations
+author: Danger丶亡月
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
@@ -83,7 +84,7 @@ keywords: "Jekyll, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: false
 
 # Specify the date when the site was setup
 #since: 2015
@@ -117,7 +118,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories/
   #about: /about/
   archives: /archives/
   tags: /tags/
@@ -212,9 +213,9 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
-
+  GitHub: https://github.com/2391134843
 
 # Social Links Icons
 # Icon Mapping:
@@ -226,8 +227,8 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+ # Twitter: twitter
+ # Weibo: weibo
 
 
 # Sidebar Avatar
@@ -283,9 +284,11 @@ sidebar:
 #links_title: Links
 #links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
 
+#博客友情链接
+links: 
+  ykBlog: https://m8524769.github.io/
+  YGBlog: http://xiaopengtongxue.top
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -379,8 +382,8 @@ han: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: comments
   count: true
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
@@ -535,7 +538,7 @@ baidu_push: false
 # API Documentation:
 # https://developers.google.com/google-apps/calendar/v3/reference/events/list
 calendar:
-  enable: false
+  enable: true
   calendar_id: <required>
   api_key: <required>
   orderBy: startTime
@@ -559,7 +562,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -569,7 +572,7 @@ local_search:
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
-exturl: false
+exturl: true
 
 
 #! ---------------------------------------------------------------
