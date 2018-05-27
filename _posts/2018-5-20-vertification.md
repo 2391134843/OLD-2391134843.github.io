@@ -62,7 +62,11 @@ public void init() throws ServletException {
 // web工程中读取 文件，必须使用绝对磁盘路径
 String path = getServletContext().getRealPath("/WEB-INF/new_word.txt");
 try {
-BufferedReader reader = new BufferedReader(new FileReader(path));
+// BufferedReader reader = new BufferedReader(new FileReader(path));
+/**
+*防止乱码，“UTF8”
+*/
+ BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(path),"UTF-8"));
 String line;
 while ((line = reader.readLine()) != null) {
 words.add(line);
@@ -219,4 +223,89 @@ __JavaScript代码很重要,利用JavaScript代码实现点击更换图片的功
 ## 成语文本文件部分
 ![](http://p8i28834i.bkt.clouddn.com/vertificaion-4.png)
 
-生成验证码功能完成，目前还没有实现验证登录核实验证码。
+## 实现验证功能
+利用session来验证输入的验证码是否正确
+---
+
+servlet服务器代码：
+```java
+package Checking;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet(name = "LoginServlet")
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        /**
+         * 利用session域实现验证码的验证效果
+         */
+        request.setCharacterEncoding("UTF-8");
+        //获得页面输入的验证码
+        String checkCode_client = request.getParameter("check_image");
+        //获得生成图片的文字的验证码
+        String checkCode_session = (String) request.getSession().getAttribute("check-session");
+        request.setAttribute("check1",checkCode_session);
+        System.out.println(checkCode_session);
+        //验证图片验证码和输入的验证码是否是一致的
+        if (!checkCode_client.equals(checkCode_session)) {
+            request.setAttribute("loginInfo", "验证码错误");
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
+            return;
+        } else {
+
+        }
+
+
+    }
+}
+
+```
+JSP页面代码：
+```html
+<%--
+  Created by IntelliJ IDEA.
+  User: 育  Danger
+  Date: 2018/5/27
+  Time: 10:33
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <%--图片文件要放在web目录下面，不能放在WEB-INF--%>
+    <link href="111.jpg" rel="icon" />
+    <title>【官方】登录界面</title>
+    <script type="text/javascript">
+        window.onload = function (ev) {
+        }
+        function changeImg(obj) {
+            // 利用参数，实现点击更换验证码功能参数不能一样，所以利用取当前时间的方式。
+            obj.src = "/checksession?time=" + new Date().getTime();
+        }
+    </script>
+</head>
+<body>
+        <form action="/login" method="post">
+            <div><%=request.getAttribute("loginInfo")==null?"":request.getAttribute("loginInfo")%></div>
+            <%--<div><%=request.getAttribute("check1")%></div>--%>
+            用户名：<input type="text" name="username"><br>
+            密码：<input type="password" name="password"><br>
+            验证码：<input type="text"  name="check_image"><img id="image" src="/checksession" >
+            <a href="#" onclick="changeImg(image)">看不清,换一张</a>
+            <br>
+            <input type="submit" value="提交">
+
+        </form>
+</body>
+</html>
+
+```
