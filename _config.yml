@@ -270,7 +270,7 @@ sidebar:
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
-  offset: 12
+  offset: 10
   offset_float: 0
 
   # Back to top in sidebar
@@ -308,7 +308,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 100
+  length: 30
 
 # Post meta display settings
 post_meta:
