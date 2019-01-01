@@ -13,7 +13,7 @@ categories:
 + 用访问链接的形式去访问资源提供下载
 ## 利用Srvlet技术实现客户端下载服务器端文件
 效果图如下：
-![](http://p8i28834i.bkt.clouddn.com/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD-1.png)
+![](http://xiaolitongxue.top/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD-1.png)
 ### 第一种方式-直接利用<a />标签来实现文件的下载
 Servlet代码部分：
 ```java
@@ -58,7 +58,7 @@ HTML代码部分：
 </html>
 ```
 __解释：这种方式是直接利用的HTML超链接的方法直接去服务器端寻找资源并实现下载，但是这样会有弊端。例如：__
-![](http://p8i28834i.bkt.clouddn.com/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD-2.png)
+![](http://xiaolitongxue.top/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD-2.png)
 所以说这种方法并不是最好的方法.
 ### 第二种方式，利用Servlet的respones和request实现文件下载
 __原理：前台的文件链接上面多加一个参数，参数中包含需要下载文件的名称，后台利用request接受到前台发送的参数，然后用response来设置消息头来保证文件只实现下载而不是打开。（注意乱码问题）__
@@ -181,8 +181,8 @@ __代码中的解释比较详细，这里就不多再解释代码了__
 ----
 ## 利用Servlet实现文件从客户端上传到服务器端
 图片演示结果：
-![](http://p8i28834i.bkt.clouddn.com/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02.png)
-![](http://p8i28834i.bkt.clouddn.com/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD1.png)
+![](http://xiaolitongxue.top/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A02.png)
+![](http://xiaolitongxue.top/Servlet%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD1.png)
 
 代码实现：
 ```java
