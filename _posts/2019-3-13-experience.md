@@ -14,38 +14,38 @@ categories:
 ## 我对软设考试的看法
 我当时是因为老师叫我去试一试，以考促学，然后就准备买真题开始练，但是买错成了教材，最后教程和真题两本书都买了。但是推荐大家主要看真题，教程随便看看就行。
 我用的真题书如下：
-![](http://xiaolitongxue.top/%E8%BD%AF%E8%80%832.jpg)
+![](https://blog-1258566513.cos.ap-chengdu.myqcloud.com/Blog-image/%E8%BD%AF%E8%AE%BE%E7%BB%8F%E9%AA%8C/%E8%BD%AF%E8%80%832.jpg)
 
 软件设计师的考试题目一般难度都不会很大都比较基础，可能有极个别算法题有那么一两空有点难度，或者有些选择题我们没有见到过，大多数题目我们都是可以做的，只要知识点复习到位，大家肯定问题都不大，主要是要花点时间去复习。
 复习技巧：__刷题 !! 刷题 !! 刷题!!__
 
 ## 我的成绩
 上午下午的成绩都是52分，满分75分，一般情况下45分为及格线(有极少数情况时候会是46或44等等..一般不会波动太多)。
-![](http://xiaolitongxue.top/%E8%BD%AF%E8%80%831.png)
+![](https://blog-1258566513.cos.ap-chengdu.myqcloud.com/Blog-image/%E8%BD%AF%E8%AE%BE%E7%BB%8F%E9%AA%8C/%E8%BD%AF%E8%80%831.png)
 
 ## 报名地址
 软考报名地址：
 [点击进入报名](http://bm.ruankao.org.cn/sign/welcome)
 每个人需要独立注册一个账号~
 报名界面：
-![](http://xiaolitongxue.top/%E8%BD%AF%E8%80%836.png)
+![](https://blog-1258566513.cos.ap-chengdu.myqcloud.com/Blog-image/%E8%BD%AF%E8%AE%BE%E7%BB%8F%E9%AA%8C/%E8%BD%AF%E8%80%836.png)
 
 ## 考试分析
 考试分上午和下午，上午是75个选择题(均为单选)，下午是五道大题目(有许多小空)。一般情况下我们理工的学生都是去电大考试。
 __考试均为笔试,没有机试。__
 ## 考试内容
 考试大体知识点：
-![](http://xiaolitongxue.top/%E8%BD%AF%E8%80%833.png)
+![](https://blog-1258566513.cos.ap-chengdu.myqcloud.com/Blog-image/%E8%BD%AF%E8%AE%BE%E7%BB%8F%E9%AA%8C/%E8%BD%AF%E8%80%833.png)
 
 ## 考试分值
 分析图：
-![](http://xiaolitongxue.top/%E8%BD%AF%E8%80%834.png)
+![](https://blog-1258566513.cos.ap-chengdu.myqcloud.com/Blog-image/%E8%BD%AF%E8%AE%BE%E7%BB%8F%E9%AA%8C/%E8%BD%AF%E8%80%834.png)
 
 ## 题目介绍
 上午题没有什么特别好介绍的...范围很大，需要大量的练习真题，刷题就完事了~
 
 下午题介绍：
-![](http://xiaolitongxue.top/%E8%BD%AF%E8%80%835.png)
+![](https://blog-1258566513.cos.ap-chengdu.myqcloud.com/Blog-image/%E8%BD%AF%E8%AE%BE%E7%BB%8F%E9%AA%8C/%E8%BD%AF%E8%80%835.png)
 我个人觉得一般情况下，下午要比上午题目简单，当你题目做多之后你就会发现前面几个题目的套路都是差不多的。不过每个题目你想拿到满分也比较困难，我觉得可以适当性选择放弃那么一两空，Java/C++的这个选做题大家应该是可以拿满分的。
 
 数据流图和数据库设计题的话，大家一定要细心，慢慢做时间足够，这两个题目是比较简单的，争取拿高分，算法题的话一般都是贪心、动态规划、KMP、皇后问题等等...这个题应该是最难的，建议可以放到最后做~
