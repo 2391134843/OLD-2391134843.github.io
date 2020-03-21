@@ -27,8 +27,6 @@ error: update_ref failed for ref 'refs/remotes/origin/master': cannot update the
 
 ```
 解决方法：
-
-
 ```shell
 yu-Danger% sudo git push -f
 
