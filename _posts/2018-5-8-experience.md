@@ -24,8 +24,8 @@ url=https://github.com/2391134843/2391134843.github.io.git
 ```
   c635cc3..2485178  master -> master
 error: update_ref failed for ref 'refs/remotes/origin/master': cannot update the ref 'refs/remotes/origin/master': unable to append to '.git/logs/refs/remotes/origin/master': Permission denied
-
 ```
+ 
 解决方法：
 
 ```shell
